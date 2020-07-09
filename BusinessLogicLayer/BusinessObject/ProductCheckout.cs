@@ -14,6 +14,7 @@ namespace BusinessLogicLayer.BusinessObject
         public ProductCheckout(ProductCart pCart)
         {
             this.Cart = pCart;
+            lstProduct = new List<Product>();
         }
 
         public List<Product> CheckOutCart()
