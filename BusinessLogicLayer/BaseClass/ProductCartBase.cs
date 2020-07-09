@@ -10,6 +10,7 @@ namespace BusinessLogicLayer.BaseClass
     public abstract class ProductCartBase
     {
         private List<Product> _lstProduct;
+        private List<ProductPromotion> _lstPromotion = new List<ProductPromotion>();
 
         public ProductCartBase()
         {
@@ -26,5 +27,16 @@ namespace BusinessLogicLayer.BaseClass
             this._lstPromotion.Add(promo);
             promo.Cart = this;
         }
+
+        public List<Product> AllProducts
+        {
+            get { return _lstProduct; }
+        }
+
+        public List<ProductPromotion> AllProductPromo
+        {
+            get { return _lstPromotion; }
+        }
+
     }
 }
