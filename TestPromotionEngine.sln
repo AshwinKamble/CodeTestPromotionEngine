@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1169
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPromotionEngine", "TestPromotionEngine\TestPromotionEngine.csproj", "{EE946AE1-FB4D-4C28-B057-21C9C53FA6CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{E3A97FBC-551D-42E0-8B8F-C576B3DC6DFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EE946AE1-FB4D-4C28-B057-21C9C53FA6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE946AE1-FB4D-4C28-B057-21C9C53FA6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE946AE1-FB4D-4C28-B057-21C9C53FA6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A97FBC-551D-42E0-8B8F-C576B3DC6DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A97FBC-551D-42E0-8B8F-C576B3DC6DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A97FBC-551D-42E0-8B8F-C576B3DC6DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A97FBC-551D-42E0-8B8F-C576B3DC6DFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
