@@ -15,5 +15,16 @@ namespace BusinessLogicLayer.BaseClass
         {
             this._lstProduct = new List<Product>();
         }
+
+        public void AddProductToCart(Product prd)
+        {
+            this._lstProduct.Add(prd);
+        }
+
+        public void AddPromption(ProductPromotion promo)
+        {
+            this._lstPromotion.Add(promo);
+            promo.Cart = this;
+        }
     }
 }

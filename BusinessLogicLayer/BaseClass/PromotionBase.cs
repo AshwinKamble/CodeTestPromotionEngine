@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.BaseClass
 {
-    public abstract class PromotionBase
+    public abstract class ProductPromotion
     {
-        public PromotionBase(string productName)
+        public ProductPromotion(string productName)
         {
             this.Name = productName;
         }

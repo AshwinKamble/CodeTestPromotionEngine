@@ -11,6 +11,14 @@ namespace BusinessLogicLayer.BusinessObject
     {
         private List<Product> _lstProduct;
 
+        public List<Product> AllProducts
+        {
+            get
+            {
+                return _lstProduct;
+            }
+        }
+
         public ProductCart() : base()
         {
         }
