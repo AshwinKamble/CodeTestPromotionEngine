@@ -8,15 +8,13 @@ namespace BusinessLogicLayer.BaseClass
 {
     public abstract class ProductPromotion
     {
+        public string Name { get; set; }
+        public ProductCartBase Cart { get; set; }
+        public int ProdRate { get; set; }
+
         public ProductPromotion(string productName)
         {
             this.Name = productName;
-        }
-        public string Name { get; set; }
-
-        public abstract void AddPromotion()
-        {
-            
         }
     }
 }

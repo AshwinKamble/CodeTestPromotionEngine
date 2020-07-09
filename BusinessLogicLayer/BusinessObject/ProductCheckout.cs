@@ -9,14 +9,16 @@ namespace BusinessLogicLayer.BusinessObject
     public class ProductCheckout
     {
         private ProductCart Cart;
+        private List<Product> lstProduct { get; set; }
+
         public ProductCheckout(ProductCart pCart)
         {
             this.Cart = pCart;
         }
 
-        public void CheckOutCart()
+        public List<Product> CheckOutCart()
         {
-
+            return null;
         }
     }
 }
