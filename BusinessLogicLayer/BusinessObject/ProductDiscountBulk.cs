@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.BusinessObject
 {
-   public class ProductDiscountBulk : ProductPromotion
+   public class ProductDiscount : PromotionBase
     {
         public string ProdName { get; set; }
         public int ProdQuantity { get; set; }
         public int ProdRate { get; set; }
 
-        public ProductDiscountBulk(string productName, int productQuantity, int productRate) : base (productName)
+        public ProductDiscount(string productName, int productQuantity, int productRate) : base (productName)
         {
             this.ProdName = productName;
             this.ProdQuantity = productQuantity;

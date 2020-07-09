@@ -49,6 +49,8 @@
     <Compile Include="BusinessObject\ProductCheckout.cs" />
     <Compile Include="BusinessObject\ProductDiscountBulk.cs" />
     <Compile Include="BusinessObject\ProductDiscountCombined.cs" />
+    <Compile Include="Interface\IProductGroup.cs" />
+    <Compile Include="Interface\IProductQuantity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

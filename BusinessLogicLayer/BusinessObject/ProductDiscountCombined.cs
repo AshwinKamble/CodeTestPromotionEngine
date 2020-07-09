@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.BusinessObject
 {
-    public class ProductDiscountCombined : ProductPromotion
+    public class ProductDiscountGroup : ProductPromotion
     {
         public string GroupName { get; set; }
         public ProductDiscountCombined(string grpName, int price) : base(grpName)

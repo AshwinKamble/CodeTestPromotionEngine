@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.BaseClass
 {
-    public abstract class ProductPromotion
+    public  class PromotionBase
     {
-        public string Name { get; set; }
-        public ProductCartBase Cart { get; set; }
-        public int ProdRate { get; set; }
-
-        public ProductPromotion(string productName)
+        public PromotionBase(string productName)
         {
             this.Name = productName;
         }
+        public ProductCartBase Cart { get; set; }
+        public string Name { get; set; }
+        public int ProdRate { get; set; }
     }
 }

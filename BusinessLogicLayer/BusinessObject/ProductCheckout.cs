@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.BusinessObject
 {
-    public class ProductCheckout
+    public class ProductCheckout : IProductQuantity, IProductGroup
     {
         private ProductCart Cart;
         private List<Product> lstProduct { get; set; }
@@ -17,9 +18,14 @@ namespace BusinessLogicLayer.BusinessObject
             lstProduct = new List<Product>();
         }
 
-        public List<Product> CheckOutCart()
+        List<Product> IProductQuantity.GetTotalAmount()
         {
-            return null;
+            throw new NotImplementedException();
+        }
+
+        List<Product> IProductGroup.GetTotalAmount()
+        {
+            throw new NotImplementedException();
         }
     }
 }
