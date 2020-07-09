@@ -31,6 +31,7 @@ namespace BusinessLogicLayer.BusinessObject
 
                         Product prd = new Product(prod.ProductName, prod.ProductPrice);
                         prd.ProductPriceWithDiscount = price;
+                        prd.prodCount = countOfProdut;
                         lstProduct.Add(prd);
                         break;
                     }
@@ -45,7 +46,43 @@ namespace BusinessLogicLayer.BusinessObject
 
         List<Product> IProductGroup.GetTotalAmount()
         {
-            throw new NotImplementedException();
+            try
+            {
+                int cntrC = Cart.AllProducts.Where(y => y.ProductName.Equals("C")).Count();
+                int cntrD = Cart.AllProducts.Where(y => y.ProductName.Equals("D")).Count();
+
+                foreach (var promo in Cart.AllProductPromo)
+                {
+                    if (promo is ProductDiscountGroup)
+                    {
+                        foreach (Product prod in Cart.AllProducts.FindAll(x => x.ProductName.Equals("C")))
+                        {
+                            decimal cost = ((cntrC < cntrD || cntrC == 0)) ? 0 : ((cntrC - cntrD) * prod.ProductPrice);
+
+                            Product prd = new Product(prod.ProductName, prod.ProductPrice);
+                            prd.ProductPriceWithDiscount = cost;
+                            prd.prodCount = cntrC;
+                            lstProduct.Add(prd);
+                            break;
+                        }
+                        foreach (Product prod in Cart.AllProducts.FindAll(x => x.ProductName.Equals("D")))
+                        {
+                            decimal cost = (cntrD == cntrC) ? ((cntrD + cntrC) / 2 * promo.ProdRate) : (((cntrD + cntrC) / 2 * promo.ProdRate) + ((cntrD) % 2) * prod.ProductPrice);
+
+                            Product prd = new Product(prod.ProductName, prod.ProductPrice);
+                            prd.ProductPriceWithDiscount = cost;
+                            prd.prodCount = cntrD;
+                            lstProduct.Add(prd);
+                            break;
+                        }
+                    }
+                }
+                return lstProduct;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

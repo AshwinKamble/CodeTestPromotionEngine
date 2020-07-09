@@ -1,4 +1,5 @@
 using BusinessLogicLayer.BusinessObject;
+using BusinessLogicLayer.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +12,39 @@ namespace TestPromotionEngine
     {
         static void Main(string[] args)
         {
-            Product p1 = new Product("A", 50);
-            Product p2 = new Product("B", 30);
-            Product p3 = new Product("C", 20);
-            Product p4 = new Product("D", 15);
-
             ProductCart cart = new ProductCart();
-            cart.AddProductToCart(p1);
-            cart.AddProductToCart(p2);
-            cart.AddProductToCart(p3);
-            cart.AddProductToCart(p4);
+
+            cart.AddProductToCart(new Product("A", 50));
+            cart.AddProductToCart(new Product("A", 50));
+            cart.AddProductToCart(new Product("A", 50));
+
+            cart.AddProductToCart(new Product("B", 30));
+            cart.AddProductToCart(new Product("B", 30));
+
+            cart.AddProductToCart(new Product("C", 20));
+            cart.AddProductToCart(new Product("D", 15));
 
             cart.AddPromption(new ProductDiscountQuantity("A", 3, 130));
             cart.AddPromption(new ProductDiscountQuantity("B", 2, 45));
 
+            IProductQuantity checkout1 = new ProductCheckout(cart);
+            List<Product> lstProd1 = checkout1.GetTotalAmount();
+
+            ShowInvoice(lstProd1);
+
+            cart.AddPromption(new ProductDiscountGroup("C&D", 30));
+            IProductGroup checkout2 = new ProductCheckout(cart);
+            List<Product> lstProd2 = checkout2.GetTotalAmount();
+
+            ShowInvoice(lstProd2);
+        }
+
+        public static void ShowInvoice(List<Product> lstProd)
+        {
+            foreach (Product item in lstProd)
+            {
+                Console.WriteLine(item.prodCount + " of Product : " + item.ProductName + " with Discount : " + item.ProductPriceWithDiscount);
+            }
         }
     }
 }

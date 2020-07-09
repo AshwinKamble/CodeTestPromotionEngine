@@ -9,18 +9,18 @@ namespace BusinessLogicLayer.BusinessObject
 {
    public class ProductCart : ProductCartBase
     {
-        private List<Product> _lstProduct;
+        public ProductCart() : base()
+        {
+            this._lstProduct = new List<Product>();
+        }
 
+        private List<Product> _lstProduct;
         public List<Product> AllProducts
         {
             get
             {
                 return _lstProduct;
             }
-        }
-
-        public ProductCart() : base()
-        {
         }
 
         public void AddProductToCart(Product prd)

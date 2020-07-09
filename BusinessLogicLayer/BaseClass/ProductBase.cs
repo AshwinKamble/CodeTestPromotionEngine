@@ -17,5 +17,6 @@ namespace BusinessLogicLayer.BaseClass
         public decimal ProductPriceWithDiscount { get; set; }
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
+        public int prodCount { get; set; }
     }
 }
