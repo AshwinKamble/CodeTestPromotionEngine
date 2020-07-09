@@ -16,7 +16,7 @@ namespace BusinessLogicLayer.BaseClass
 
         public abstract void AddPromotion()
         {
-
+            
         }
     }
 }
