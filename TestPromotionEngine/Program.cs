@@ -24,6 +24,8 @@ namespace TestPromotionEngine
 
             ProductDiscountBulk promo1 = new ProductDiscountBulk("A", 3 , 150);
             ProductDiscountBulk promo2 = new ProductDiscountBulk("B", 2, 45);
+
+            ProductCheckout checkout = new ProductCheckout(cart);
         }
     }
 }

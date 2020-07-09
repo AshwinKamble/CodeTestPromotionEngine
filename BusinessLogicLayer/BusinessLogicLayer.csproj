@@ -46,6 +46,7 @@
     <Compile Include="BaseClass\PromotionBase.cs" />
     <Compile Include="BusinessObject\Product.cs" />
     <Compile Include="BusinessObject\ProductCart.cs" />
+    <Compile Include="BusinessObject\ProductCheckout.cs" />
     <Compile Include="BusinessObject\ProductDiscountBulk.cs" />
     <Compile Include="BusinessObject\ProductDiscountCombined.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
