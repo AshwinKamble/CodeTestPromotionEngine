@@ -47,8 +47,8 @@
     <Compile Include="BusinessObject\Product.cs" />
     <Compile Include="BusinessObject\ProductCart.cs" />
     <Compile Include="BusinessObject\ProductCheckout.cs" />
-    <Compile Include="BusinessObject\ProductDiscountBulk.cs" />
-    <Compile Include="BusinessObject\ProductDiscountCombined.cs" />
+    <Compile Include="BusinessObject\ProductDiscountQuantity.cs" />
+    <Compile Include="BusinessObject\ProductDiscountGroup.cs" />
     <Compile Include="Interface\IProductGroup.cs" />
     <Compile Include="Interface\IProductQuantity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

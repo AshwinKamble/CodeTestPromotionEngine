@@ -10,7 +10,7 @@ namespace BusinessLogicLayer.BusinessObject
     public class ProductDiscountGroup : ProductPromotion
     {
         public string GroupName { get; set; }
-        public ProductDiscountCombined(string grpName, int price) : base(grpName)
+        public ProductDiscountGroup(string grpName, int price) : base(grpName)
         {
             this.GroupName = grpName;
             this.ProdRate = price;

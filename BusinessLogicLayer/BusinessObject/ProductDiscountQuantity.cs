@@ -7,22 +7,16 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.BusinessObject
 {
-   public class ProductDiscount : PromotionBase
+   public class ProductDiscountQuantity : ProductPromotion
     {
         public string ProdName { get; set; }
         public int ProdQuantity { get; set; }
-        public int ProdRate { get; set; }
 
-        public ProductDiscount(string productName, int productQuantity, int productRate) : base (productName)
+        public ProductDiscountQuantity(string productName, int productQuantity, int productRate) : base(productName)
         {
             this.ProdName = productName;
             this.ProdQuantity = productQuantity;
             this.ProdRate = productRate;
-        }
-
-        public override void AddPromotion()
-        {
-            
         }
     }
 }
