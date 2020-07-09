@@ -24,11 +24,18 @@ namespace BusinessLogicLayer.BusinessObject
             {
                 foreach (ProductDiscountQuantity promo in Cart.AllProductPromo)
                 {
+                    int countOfProdut = Cart.AllProducts.Where(y => y.ProductName.Equals(promo.ProdName)).Count();
                     foreach (Product prod in Cart.AllProducts.FindAll(x => x.ProductName.Equals(promo.ProdName)))
                     {
-                        
+                        decimal price = (countOfProdut / promo.ProdQuantity) * promo.ProdRate + (countOfProdut % promo.ProdQuantity * prod.ProductPrice);
+
+                        Product prd = new Product(prod.ProductName, prod.ProductPrice);
+                        prd.ProductPriceWithDiscount = price;
+                        lstProduct.Add(prd);
+                        break;
                     }
                 }
+                return lstProduct;
             }
             catch (Exception ex)
             {
