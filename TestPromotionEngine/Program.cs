@@ -22,8 +22,9 @@ namespace TestPromotionEngine
             cart.AddProductToCart(p3);
             cart.AddProductToCart(p4);
 
-            ProductDiscount promo1 = new ProductDiscount("A", 3 , 150);
-            ProductDiscount promo2 = new ProductDiscount("B", 2, 45);
+            cart.AddPromption(new ProductDiscountQuantity("A", 3, 130));
+            cart.AddPromption(new ProductDiscountQuantity("B", 2, 45));
+
         }
     }
 }

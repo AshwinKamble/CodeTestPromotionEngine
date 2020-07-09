@@ -20,7 +20,20 @@ namespace BusinessLogicLayer.BusinessObject
 
         List<Product> IProductQuantity.GetTotalAmount()
         {
-            throw new NotImplementedException();
+            try
+            {
+                foreach (ProductDiscountQuantity promo in Cart.AllProductPromo)
+                {
+                    foreach (Product prod in Cart.AllProducts.FindAll(x => x.ProductName.Equals(promo.ProdName)))
+                    {
+                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         List<Product> IProductGroup.GetTotalAmount()
