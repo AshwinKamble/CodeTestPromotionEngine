@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="BaseClass\ProductBase.cs" />
     <Compile Include="BaseClass\ProductCartBase.cs" />
+    <Compile Include="BaseClass\PromotionBase.cs" />
     <Compile Include="BusinessObject\Product.cs" />
     <Compile Include="BusinessObject\ProductCart.cs" />
+    <Compile Include="BusinessObject\ProductDiscount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
